@@ -1,0 +1,15 @@
+jobs:
+  my-job:
+    runs-on: self-hosted 
+    steps:
+      - name: Set Workflow Run ID and Job ID as Environment Variables
+        run: |
+          echo "Setting environment variables...";echo "run id : $GITHUB_RUN_ID, job id :$GITHUB_JOB  "
+          echo "GITHUB_RUN_ID=$GITHUB_RUN_ID" >> $GITHUB_ENV
+          echo "GITHUB_JOB=$GITHUB_JOB" >> $GITHUB_ENV
+
+      - name: Use Workflow Run ID and Job ID
+        run: |
+          echo "Using environment variables..."
+          echo "Workflow Run ID: $GITHUB_RUN_ID"
+          echo "Job ID: $GITHUB_JOB"
