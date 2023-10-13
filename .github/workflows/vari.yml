@@ -1,3 +1,7 @@
+name: "testing variables"
+on:
+  push:
+
 jobs:
   my-job:
     runs-on: self-hosted 
